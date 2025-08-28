@@ -41,7 +41,8 @@ This search revealed an interesting file: `/pazz/acantha_pass.txt`, which contai
 
 | user | password | flag
 |------|----------|-----
-| Row 1    | Row 1    |h
+| acantha|mYYLhLBSkrzZqFydxGkn|^CaEuVJtJjaCwZtuuAFD^
+
 
 
 
