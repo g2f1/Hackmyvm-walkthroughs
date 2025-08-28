@@ -31,11 +31,18 @@ I tried to search for a file that contains the word `gift` in its name.
 
 I found an executable file called `gift_hacker`, which I could run because I belong to the `hacker` group. After executing it, I obtained a shell with the **UID of `acantha`**. However, I could not access her home directory because the shell still had the **GID of `hacker`**.  
 
-To find files owned by `acantha`, I used the following command:
+So I decided To search for all the files owned by `acantha`, I used the following command:
 
 ```bash
 find / -user acantha -type f 2>/dev/null
 ```
+
+This search revealed an interesting file: `/pazz/acantha_pass.txt`, which contained the password for acantha.
+
+| user | password | flag
+|------|----------|-----
+| Row 1    | Row 1    |h
+
 
 
 
