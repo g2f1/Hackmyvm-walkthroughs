@@ -18,3 +18,5 @@ Each time we will find a file `mission.txt` that gives us some what we need to i
 
     ## ES ##
     La usuaria acantha nos ha dejado un regalo para obtener sus poderes.
+
+I found also a file `readme.txt` that gives some informations like that the home of each user is in `/pwned/USER` and the file `flagz.txt` contain some kind of flag that we can insert in the official site to participate in the ranking.
