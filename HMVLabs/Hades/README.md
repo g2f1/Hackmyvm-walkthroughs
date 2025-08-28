@@ -43,7 +43,26 @@ This search revealed an interesting file: `/pazz/acantha_pass.txt`, which contai
 |------|----------|-----
 | acantha|mYYLhLBSkrzZqFydxGkn|^CaEuVJtJjaCwZtuuAFD^
 
+# Level 2
 
+    ################
+    # MISSION 0x02 #
+    ################
 
+    ## EN ##
+    The user alala has left us a program, if we insert the 6 correct numbers, she gives us her password!
+
+    ## ES ##
+    La usuaria alala nos ha dejado un programa, si insertamos los 6 numeros correctos, nos da su password!
+
+The executable `guess` prompts for a PIN code. If the correct PIN is entered, it reveals the password for the user `alala`. if not, it simply returns *"No"   
+
+To extract this password, we can either analyze the binary with a disassembler or the `strings` command
+
+![image](./assets/level2_string.png)
+
+| user | password | flag
+|------|----------|-----
+| alala|DsYzpJQrCEndEWIMxWxu|^gTdGmkwhDrCqKrDQpxH^
 
 
