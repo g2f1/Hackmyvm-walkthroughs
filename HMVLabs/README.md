@@ -1,0 +1,3 @@
+# HMVLabs
+
+**HMVLabs** is a *wargame-style* platform designed to help CTF players learn and progress from basic to advanced concepts in Linux and programming. It is divided into three chapters: **Venus**, **Hades**, and **Temperance**. In *Venus* and *Hades*, players connect to a remote machine via **SSH** and must find the password of the next user in order to advance. The *Temperance* chapter introduces a different type of challenge where players need to develop a script, using any programming language of their choice, to connect to a remote listener and complete a set of tasks to retrieve the flag.
