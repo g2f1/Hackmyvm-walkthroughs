@@ -77,6 +77,18 @@ To extract this password, we can either analyze the binary with a disassembler o
     ## ES ##
     A la usuaria althea le encanta leer la ayuda de Linux.
 
-We need to find a way to read the file `althea_pass.txt` that's belong to the user and group althea. We have an executable `read` when excuting it we get the manuel page of the man command
+We need to find a way to read the file `althea_pass.txt` that's belong to the user and group althea. We have an executable `read` when excuting it we get the manuel page of the man command. But wait we can run commands from the man pages 
+
+![image](./assets/level3_id.png)
+
+So `read` set the uid to that od the user `althea`. We can use that to read the file containing the password
+
+![image](./assets/level3_password.png)
+
+
+
+
+
+
 
 
