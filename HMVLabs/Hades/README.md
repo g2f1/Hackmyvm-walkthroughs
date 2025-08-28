@@ -67,15 +67,16 @@ To extract this password, we can either analyze the binary with a disassembler o
 
 # Level 3
 
-################
-# MISSION 0x03 #
-################
+    ################
+    # MISSION 0x03 #
+    ################
 
-## EN ##
-User althea loves reading Linux help.
+    ## EN ##
+    User althea loves reading Linux help.
 
-## ES ##
-A la usuaria althea le encanta leer la ayuda de Linux.
+    ## ES ##
+    A la usuaria althea le encanta leer la ayuda de Linux.
 
 We need to find a way to read the file `althea_pass.txt` that's belong to the user and group althea. We have an executable `read` when excuting it we get the manuel page of the man command
+
 
