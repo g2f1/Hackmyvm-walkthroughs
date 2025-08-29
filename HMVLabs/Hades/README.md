@@ -1,6 +1,6 @@
 # Mission 1
 
-we use the initial credentials to connect to the machine
+The initial credentials to connect to the machine
 
     Host: hades.hackmyvm.eu
     Port: 6666
@@ -154,7 +154,7 @@ The program `obsessed` has weird behaviour. It takes an input from the environem
 
 ![image](./assets/level6_1.png)
 
-I try to use `strings` but it doesn't work. It looks like it's about ascii(a encodes as 97 in ascii); so I need to put something that gives in ascii 94.
+`strings` doesn't work. But it looks like it's about ascii(a encodes as 97 in ascii); so I need to put something that gives in ascii 94.
 
 ![image](./assets/level6_2.png)
 
@@ -198,7 +198,6 @@ Using `sudo -l` I confirm the `mission.txt` statement
 
 ![image](./assets/level8_sudo.png)
 
-
 Now the task is clear and straightforward: access the home directory of `arete` and copy interesting files to a location where we have read permissions. The main question is what exactly needs to be copied. From previous missions, I know that in every home directory there is a file called `flagz.txt` which contains the flag (not the password). This is not an issue, since submitting the flag on the platform will reveal the corresponding password for that user.
 
 ![image](./assets/level8_flag.png)
@@ -206,4 +205,21 @@ Now the task is clear and straightforward: access the home directory of `arete` 
 | user | password | flag
 |------|----------|-----
 |arete|QjrIovHacmGWxVjXRLmA|^qmrrbGUXLTqLFDyCDlx^
+
+# Mission 9
+
+    ################
+    # MISSION 0x09 #
+    ################
+    
+    ## EN ##
+    The user artemis allows us to use some binary on her behalf. Its a gift... 
+    
+    ## ES ##
+    La usuaria artemis nos permite usar algun binario en su nombre. Es un regalo...
+
+![image](./assets/level9_sudo.png)
+
+/sbin/capsh 
+
 
