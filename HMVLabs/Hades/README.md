@@ -1,4 +1,4 @@
-# Level 1
+# Mission 1
 
 we use the initial credentials to connect to the machine
 
@@ -43,7 +43,7 @@ This search revealed an interesting file: `/pazz/acantha_pass.txt`, which contai
 |------|----------|-----
 | acantha|mYYLhLBSkrzZqFydxGkn|^CaEuVJtJjaCwZtuuAFD^
 
-# Level 2
+# Mission 2
 
     ################
     # MISSION 0x02 #
@@ -65,7 +65,7 @@ To extract this password, we can either analyze the binary with a disassembler o
 |------|----------|-----
 | alala|DsYzpJQrCEndEWIMxWxu|^gTdGmkwhDrCqKrDQpxH^
 
-# Level 3
+# Mission 3
 
     ################
     # MISSION 0x03 #
@@ -85,10 +85,119 @@ So `read` set the uid to that od the user `althea`. We can use that to read the 
 
 ![image](./assets/level3_password.png)
 
+| user | password | flag
+|------|----------|-----
+| althea|ObxEmwisYjERrDfvSbdA|^btDtPAPzSiXmoHItpqX^
+
+# Mission 4
+
+    ################
+    # MISSION 0x04 #
+    ################
+    
+    ## EN ##
+    The user andromeda has left us a program to list directories.
+    
+    ## ES ##
+    La usuaria andromeda nos ha dejado un programa para listar directorios.
+    
+I found a program called `lsme`. According to mission.txt, it is supposed to list directories. However, I wasn't able to list `/pwned/andromeda/` due to insufficient permissions. This suggests that the program sets the **UID** to that of `andromeda`, but leaves the **GID** unchanged, which restricts full access to the directory.
 
 
+![image](./assets/level4_test.png)
 
+The program asks for an input and then passes it directly to the `ls` command. The issue is that no validation or sanitization is performed on the input, which allows us to chain additional commands and potentially execute arbitrary commands.
 
+![image](./assets/level4_cat.png)
 
+| user | password | flag
+|------|----------|-----
+| andromeda|OTWGTbHzrxhYFSTlKcOt|^xzsHGrOeNctIZLGKzWq^
 
+# Mission 5
 
+    ################
+    # MISSION 0x05 #
+    ################
+    
+    ## EN ##
+    The user anthea reminds us who we are.
+    
+    ## ES ##
+    La usuaria anthea procura que no olvidemos quien somos.
+
+This time we have a program  called  `uid` executing it with parm or withou them returns the result of the `id` commmand with the uid set to anthea. We have also like before a file that contains the password for `anthea`. 
+
+![image](./assets/level5_uid.png)
+
+Since the program call the command `id`, I create a **symlink** to the command `/bin/bash` with the name `id` and I add the `/tmp` dir in the variable `PATH`. This gives a shell with the uid of `anthea`.
+
+![image](./assets/level5_bash.png)
+
+| user | password | flag
+|------|----------|-----
+| anthea|yWFLtSNQArEBTHtWgkKd|^AcFLuAjhydNKIkPoFLL^
+
+# Mission 6
+
+    ################
+    # MISSION 0x06 #
+    ################
+    
+    ## EN ##
+    User aphrodite is obsessed with the number 94. 
+    
+    ## ES ##
+    La usuaria aphrodite esta obsesionada con el numero 94.
+
+The program `obsessed` has weird behiouver. It takes an input from the environement variable MYID and return weird output.
+
+![image](./assets/level6_1.png)
+
+I try to use `strings` but it doesn't work. It looks like it's about ascii(a encodes as 97 in ascii); so I need to put something that gives 94.
+
+![image](./assets/level6_2.png)
+
+| user | password | flag
+|------|----------|-----
+| aphrodite|HPJVaqRzieKQeyyATsFv|^fmPlsDByrwmEpRAKgeP^
+
+# Mission 7
+
+    ################
+    # MISSION 0x07 #
+    ################
+    
+    ## EN ##
+    The user ariadne knows what we keep in our HOME.
+
+    ## ES ##
+    La usuaria ariadne sabe que es lo que guardamos en nuestro HOME.
+
+This program(`homecontent`) execute the following `/bin/ls $HOME`. So I use the variable HOME to chain commands.
+
+![image](./assets/level7.png)
+
+| user | password | flag
+|------|----------|-----
+| ariadne|iNgNazuJrmhJKWixktzk|^FuGFaFNhtKNxUInxAtd^
+
+# Mission 8
+
+    ################
+    # MISSION 0x08 #
+    ################
+    
+    ## EN ##
+    The user arete lets us use cp on her behalf. 
+    
+    ## ES ##
+    La usuaria arete nos deja usar cp en su nombre.
+
+Using `sudo -l` I confirm the `mission.txt` statement
+
+![image](./assets/level8_sudo.png)
+
+Now the task is clear and straightforward: access the home directory of `arete` and copy interesting files to a location where we have read permissions. The main question is what exactly needs to be copied. From previous missions, I know that in every home directory there is a file called `flagz.txt` which contains the flag (not the password). This is not an issue, since submitting the flag on the platform will reveal the corresponding password for that user.
+
+![image](./assets/level8_flag.png)
