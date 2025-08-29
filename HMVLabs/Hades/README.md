@@ -150,11 +150,11 @@ Since the program call the command `id`, I create a **symlink** to the command `
     ## ES ##
     La usuaria aphrodite esta obsesionada con el numero 94.
 
-The program `obsessed` has weird behiouver. It takes an input from the environement variable MYID and return weird output.
+The program `obsessed` has weird behaviour. It takes an input from the environement variable MYID and return weird output.
 
 ![image](./assets/level6_1.png)
 
-I try to use `strings` but it doesn't work. It looks like it's about ascii(a encodes as 97 in ascii); so I need to put something that gives 94.
+I try to use `strings` but it doesn't work. It looks like it's about ascii(a encodes as 97 in ascii); so I need to put something that gives in ascii 94.
 
 ![image](./assets/level6_2.png)
 
@@ -206,3 +206,4 @@ Now the task is clear and straightforward: access the home directory of `arete` 
 | user | password | flag
 |------|----------|-----
 |arete|QjrIovHacmGWxVjXRLmA|^qmrrbGUXLTqLFDyCDlx^
+
