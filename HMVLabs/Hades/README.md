@@ -198,6 +198,11 @@ Using `sudo -l` I confirm the `mission.txt` statement
 
 ![image](./assets/level8_sudo.png)
 
+
 Now the task is clear and straightforward: access the home directory of `arete` and copy interesting files to a location where we have read permissions. The main question is what exactly needs to be copied. From previous missions, I know that in every home directory there is a file called `flagz.txt` which contains the flag (not the password). This is not an issue, since submitting the flag on the platform will reveal the corresponding password for that user.
 
 ![image](./assets/level8_flag.png)
+
+| user | password | flag
+|------|----------|-----
+|arete|QjrIovHacmGWxVjXRLmA|^qmrrbGUXLTqLFDyCDlx^
