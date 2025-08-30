@@ -220,6 +220,14 @@ Now the task is clear and straightforward: access the home directory of `arete` 
 
 ![image](./assets/level9_sudo.png)
 
-/sbin/capsh 
+/sbin/capsh is a handy wrapper for certain types of  capability testing and environment creation
+
+It can be used to run a command.
+
+![image](./assets/level9_capsh)
+
+| user | password | flag
+|------|----------|-----
+|arete|HIiaojeORLaJBVSPDDCZ|^SegGdzPgnNdGAmKjnsa^
 
 
