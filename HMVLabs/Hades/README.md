@@ -228,6 +228,74 @@ It can be used to run a command.
 
 | user | password | flag
 |------|----------|-----
-|arete|HIiaojeORLaJBVSPDDCZ|^SegGdzPgnNdGAmKjnsa^
+|artemis|HIiaojeORLaJBVSPDDCZ|^SegGdzPgnNdGAmKjnsa^
 
+# Mission 10
 
+    ################
+    # MISSION 0x10 #
+    ################
+
+    ## EN ##
+    We need /bin/bash so that the user asia gives us her password. 
+
+    ## ES ##
+    Necesitamos /bin/bash para que la usuaria asia nos de su password.
+
+When I run `restricted`, I directly obtain the password, but I’m not sure what the real purpose of this mission is. Maybe the idea is that I’m getting a regular Bash shell, while they actually expect us to spawn a different type of shell program.
+
+| user | password | flag
+|------|----------|-----
+|asia|djqWtkLisbQlrGtLYHCv|^ngXdULWFWKCGtgxAQNv^
+
+# Mission 11
+
+    ################
+    # MISSION 0x11 #
+    ################
+
+    ## EN ##
+    The user asteria is teaching us to program in python. 
+
+    ## ES ##
+    La usuaria asteria nos esta enseñando a programar en python.
+
+![image](./assets/level11_sudo)
+
+python is runnable as the user asteria. We can exploit this to spawn a shell as `asteria`.
+
+![image](./assets/level11_python)
+
+| user | password | flag
+|------|----------|-----
+|asteria|hawMVJCYrBgoDAMVhuwT|^xSRhIftMsAwWvBAnqNZ^
+
+# Mission 12
+
+    ################
+    # MISSION 0x12 #
+    ################
+
+    ## EN ##
+    The user astraea believes in magic. 
+
+    ## ES ##
+    La usuaria astraea cree en la magia.
+
+![image](./assets/level12_php)
+
+The challenge is based on a simple PHP application that compares the hash of the input provided in the `pass` parameter with the hash of the real password of `astraea`.  
+If the two match, the application returns the password in cleartext.  
+
+They also mentioned something about *magic*, which immediately made me think of the **magic hash attack**.  
+This vulnerability occurs when PHP performs a *loose comparison* (`==` instead of `===`), allowing certain specially crafted hash values (like those starting with `0e...`) to be interpreted as `0` and thus bypass the check.
+
+I found a repo that contains a list of strings that gives magic hashes (`md5("QLTHNDT")=0e405967825401955372549139051580`)
+
+![image](./assets/level12_php1)
+
+| user | password | flag
+|------|----------|-----
+|astraea|nZkEYtjvHElOtupXKzTE|^KssHQIAFsxUamecyXIUk^
+
+# Mission 13
