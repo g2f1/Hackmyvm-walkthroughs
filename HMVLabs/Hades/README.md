@@ -294,8 +294,25 @@ I found a repo that contains a list of strings that gives magic hashes (`md5("QL
 
 ![image](./assets/level12_php1)
 
+When trying to connect using ssh as the user `astraea`, the connection closed immediately.  
+This means we need to look for another service running on the machine to connect to.
+
+Since tools like `nmap`, `netstat`, or `ss` were not available, I decided to use a simple Python-based port scanner.  
+I found one here: [ahervias77/portscanner.py](https://github.com/ahervias77/portscanner/blob/master/portscanner.py).
+
+Here’s the scan in action:
+
+![image](./assets/level12_scanner)
+
+An FTP server is running on the machine.
+
+![image](./assets/level12_ftp)
+
+
 | user | password | flag
 |------|----------|-----
-|astraea|nZkEYtjvHElOtupXKzTE|^KssHQIAFsxUamecyXIUk^
+|astraea|nZkEYtjvHElOtupXKzTE|^nqTHTzMzDPDJrKPCfVR^
 
 # Mission 13
+
+
