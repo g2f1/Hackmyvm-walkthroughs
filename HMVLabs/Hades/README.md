@@ -384,10 +384,22 @@ The script prompts for an input, stores it in the `hackme` variable, and then pe
 
 | user | password | flag
 |------|----------|-----
-|aura|TiqpedAFjwmVyBlYpzRh|^oGwmbNYdtHwJgznZdur^
+|aura|TiqpedAFjwmVyBlYpzRh|^YFMNmPnlKNpnWiYOhYy^
 
 the script seems to use this line `[[ $hackme == *"e"* || $hackme == *"o"* || $hackme == *"?"* ]]` to checks if the variable `hackme` contains the letter `e`, the letter `o`, or the character `?`.
 
 # Mission 16
+
+    ################
+    # MISSION 0x16 #
+    ################
+
+    ## EN ##
+    User aegle has a good memory for numbers.
+
+    ## ES ##
+    La usuaria aegle tiene buena memoria para los numeros.
+
+The `number` program repeatedly prompts for a number, verifies it, and continues this process until eventually printing the password.
 
 
