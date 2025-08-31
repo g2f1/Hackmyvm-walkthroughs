@@ -366,3 +366,28 @@ The source code of the executable `weird` shows that the program simply dumps th
 
 ![image](./assets/level15_sudo.png)
 
+We can’t read the current script, but we were provided with an older version that gives us some insight into its behavior.
+
+    #!/bin/bash
+    echo "What?"
+    read hackme
+    #Secure the condition!
+    #if [[ $hackme =~ "????????" ]]; then
+    #exit
+    #fi
+    #Add newest Aura pass!
+    #$hackme AURANEWPASS 2>/dev/null
+    
+The script prompts for an input, stores it in the `hackme` variable, and then performs a series of checks on it.
+
+![image](./assets/level15_printf)
+
+| user | password | flag
+|------|----------|-----
+|aura|TiqpedAFjwmVyBlYpzRh|^oGwmbNYdtHwJgznZdur^
+
+the script seems to use this line `[[ $hackme == *"e"* || $hackme == *"o"* || $hackme == *"?"* ]]` to checks if the variable `hackme` contains the letter `e`, the letter `o`, or the character `?`.
+
+# Mission 16
+
+
