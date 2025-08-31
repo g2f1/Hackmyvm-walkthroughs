@@ -224,7 +224,7 @@ Now the task is clear and straightforward: access the home directory of `arete` 
 
 It can be used to run a command.
 
-![image](./assets/level9_capsh)
+![image](./assets/level9_capsh.png)
 
 | user | password | flag
 |------|----------|-----
@@ -260,11 +260,11 @@ When I run `restricted`, I directly obtain the password, but I’m not sure what
     ## ES ##
     La usuaria asteria nos esta enseñando a programar en python.
 
-![image](./assets/level11_sudo)
+![image](./assets/level11_sudo.png)
 
 python is runnable as the user asteria. We can exploit this to spawn a shell as `asteria`.
 
-![image](./assets/level11_python)
+![image](./assets/level11_python.png)
 
 | user | password | flag
 |------|----------|-----
@@ -282,7 +282,7 @@ python is runnable as the user asteria. We can exploit this to spawn a shell as 
     ## ES ##
     La usuaria astraea cree en la magia.
 
-![image](./assets/level12_php)
+![image](./assets/level12_php.png)
 
 The challenge is based on a simple PHP application that compares the hash of the input provided in the `pass` parameter with the hash of the real password of `astraea`.  
 If the two match, the application returns the password in cleartext.  
@@ -292,7 +292,7 @@ This vulnerability occurs when PHP performs a *loose comparison* (`==` instead o
 
 I found a repo that contains a list of strings that gives magic hashes (`md5("QLTHNDT")=0e405967825401955372549139051580`)
 
-![image](./assets/level12_php1)
+![image](./assets/level12_php1.png)
 
 
 | user | password | flag
@@ -309,11 +309,11 @@ I found one here: [ahervias77/portscanner.py](https://github.com/ahervias77/port
 
 Here’s the scan in action:
 
-![image](./assets/level13_scanner)
+![image](./assets/level13_scanner.png)
 
 An FTP server is running on the machine.
 
-![image](./assets/level13_ftp)
+![image](./assets/level13_ftp.png)
 
 In the ftp server I found three files: the flag for the user `astraea`, the mission.txt and a file containing the password for the user `atalanta`.
 
@@ -343,4 +343,26 @@ In the ftp server I found three files: the flag for the user `astraea`, the miss
 
     ## ES ##
     La usuaria athena nos deja ejecutar su programa, pero no nos ha dejado su codigo fuente.
+
+The source code of the executable `weird` shows that the program simply dumps the content of `/var/lib/me` and writes it into the file specified by the environment variable `$HOME`. Then it checks the file’s owner, and if the owner is not the user `atalanta`, the program modifies its permissions by removing read access for both group and others while adding write access for the group.
+
+![image](./assets/level14_weird.png)
+
+| user | password | flag
+|------|----------|-----
+|athena|kmQMpZsXgOsnzGReRcoV|^oGwmbNYdtHwJgznZdur^
+
+# Mission 15
+
+    ################
+    # MISSION 0x15 #
+    ################
+
+    ## EN ##
+    User aura lets us use her new script.
+
+    ## ES ##
+    La usuaria aura nos deja utilizar su nuevo script.
+
+![image](./assets/level15_sudo.png)
 
