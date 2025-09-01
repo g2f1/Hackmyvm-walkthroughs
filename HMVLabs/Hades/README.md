@@ -380,7 +380,7 @@ We can’t read the current script, but we were provided with an older version t
     
 The script prompts for an input, stores it in the `hackme` variable, and then performs a series of checks on it.
 
-![image](./assets/level15_printf)
+![image](./assets/level15_printf.png)
 
 | user | password | flag
 |------|----------|-----
@@ -401,5 +401,53 @@ the script seems to use this line `[[ $hackme == *"e"* || $hackme == *"o"* || $h
     La usuaria aegle tiene buena memoria para los numeros.
 
 The `number` program repeatedly prompts for a number, verifies it, and continues this process until eventually printing the password.
+
+I use this script to bruteforce the numbers
+
+```bash
+#!/bin/bash
+
+test=""
+r=0
+
+while true; do
+    r=$((r+1))
+    for i in $(seq 9); do
+        count=$(echo -e "$test$i\n" | /pwned/aura/numbers | grep -c "OK")
+        if [ "$count" -eq "$r" ]; then
+            test="$test$i\n"
+            echo "test = $test"
+            break
+        fi
+   done
+done
+```
+This Bash script builds a sequence of numbers one by one, feeding each candidate into `/pwned/aura/numbers` and appending it to the sequence only if the program returns the expected number of `"OK"` messages.
+
+![image](./assets/level16_solve.png)
+
+But the program stops at the number `9`. After debugging, I discovered that it behaves strangely when testing `1`: instead of returning a count of `8`, it returns `11`. After multiple attempts to resolve the issue, I modified the condition from `"$count" -eq "$r"` to `"$count" -ge "$r"`, allowing it to also match cases where the count is greater than `r`.
+
+![image](./assets/level16_issue.png)
+
+![image](./assets/level16_solve1.png)
+
+I got all the numbers except for the last one because, when entering the correct final number, the program returns the password instead of `"OK"` as it did for the previous numbers.
+
+| user | password | flag
+|------|----------|-----
+|aegle|YRturIymmHSdBmEClEGe|^XCwOqgVvWpDVwPVVUJa^
+
+# Mission 17 
+
+    ################
+    # MISSION 0x17 #
+    ################
+
+    ## EN ##
+    User calliope likes to have her things looked at.
+
+    ## ES ##
+    A la usuaria calliope le gusta que le miren sus cosas.
 
 
