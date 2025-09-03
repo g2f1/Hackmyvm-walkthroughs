@@ -450,4 +450,29 @@ I got all the numbers except for the last one because, when entering the correct
     ## ES ##
     A la usuaria calliope le gusta que le miren sus cosas.
 
+![image](./assets/level17_sudo.png)
+
+![image](./assets/level17_cat.png)
+
+| user | password | flag
+|------|----------|-----
+|aegle|IlhyWxZuqIHAuqVOpXfQ|^rFWOMwBJDidqSNtEJGJ^
+
+# Mission 18
+
+################
+# MISSION 0x18 #
+################
+
+## EN ##
+The user calypso often uses write to communicate.
+
+## ES ##
+La usuaria calypso suele usar write para comunicarse.
+
+A program named `writeme` was identified. Upon execution, the following message appeared:
+
+![image](./assets/level18_writeme.png)
+
+They something about `write`. The latter allows you to communicate with other users, by copying lines from your terminal to theirs. To allow others to send us message we use the following command 
 
