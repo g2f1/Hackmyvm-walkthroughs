@@ -458,21 +458,28 @@ I got all the numbers except for the last one because, when entering the correct
 |------|----------|-----
 |aegle|IlhyWxZuqIHAuqVOpXfQ|^rFWOMwBJDidqSNtEJGJ^
 
-# Mission 18
+    # Mission 18
 
-################
-# MISSION 0x18 #
-################
+    ################
+    # MISSION 0x18 #
+    ################
 
-## EN ##
-The user calypso often uses write to communicate.
+    ## EN ##
+    The user calypso often uses write to communicate.
 
-## ES ##
-La usuaria calypso suele usar write para comunicarse.
+    ## ES ##
+    La usuaria calypso suele usar write para comunicarse.
 
 A program named `writeme` was identified. Upon execution, the following message appeared:
 
 ![image](./assets/level18_writeme.png)
 
-They something about `write`. The latter allows you to communicate with other users, by copying lines from your terminal to theirs. To allow others to send us message we use the following command 
+They something about `write`. The latter allows you to communicate with other users, by copying lines from your terminal to theirs. To permit incoming messages from other users, the command mesg y is executed.
+
+![image](./assets/level18.png)
+
+| user | password | flag
+|------|----------|-----
+|aegle|TAMYefoHcCPmexwImodo|^OCbFzMIKPQOZQMEUKwEi^
+
 
