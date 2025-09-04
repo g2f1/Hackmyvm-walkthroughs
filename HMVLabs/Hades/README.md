@@ -516,3 +516,7 @@ The provided WAV file contained unusual audio. Analysis suggested the use of SST
     ## ES ##
     La usuaria cassiopeia ve lo invisible.
 
+The file here.txt contains Base64-encoded data. Decoding it produces incomplete text along with irregular white spaces. Upon further investigation, I discovered that the file likely uses whitespace steganography.
+
+![image](./assets/level20_here.png)
+
