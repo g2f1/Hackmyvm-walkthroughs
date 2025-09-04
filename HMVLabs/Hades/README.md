@@ -458,6 +458,8 @@ I got all the numbers except for the last one because, when entering the correct
 |------|----------|-----
 |aegle|IlhyWxZuqIHAuqVOpXfQ|^rFWOMwBJDidqSNtEJGJ^
 
+# Mission 18 
+
     # Mission 18
 
     ################
@@ -480,6 +482,37 @@ They something about `write`. The latter allows you to communicate with other us
 
 | user | password | flag
 |------|----------|-----
-|aegle|TAMYefoHcCPmexwImodo|^OCbFzMIKPQOZQMEUKwEi^
+|calypso|TAMYefoHcCPmexwImodo|^pssqdorRTYuTKuQBOYd^
 
+# Mission 19 
+
+    ################
+    # MISSION 0x19 #
+    ################
+
+    ## EN ##
+    User cassandra always wanted to be on TV.
+
+    ## ES ##
+    La usuaria cassandra siempre quiso salir en la TV.
+
+The provided WAV file contained unusual audio. Analysis suggested the use of SSTV (Slow-Scan Television), a method for transmitting static images via radio. Decoding with an SSTV tool revealed the hidden content.
+
+![image](./assets/level19_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|cassandra|CKzlnvmHQz|^lntvcYNlazEljOyZYKz^
+
+# Mission 20
+
+    ################
+    # MISSION 0x20 #
+    ################
+
+    ## EN ##
+    User cassiopeia sees the invisible. 
+
+    ## ES ##
+    La usuaria cassiopeia ve lo invisible.
 
