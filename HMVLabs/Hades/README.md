@@ -520,3 +520,83 @@ The file here.txt contains Base64-encoded data. Decoding it produces incomplete 
 
 ![image](./assets/level20_here.png)
 
+`stegsnow` is then used to extract the hidden data
+
+![image](./assets/level20_flag.png)
+
+
+| user | password | flag
+|------|----------|-----
+|cassiopeia|gRqFnHblmZVZSfegPLvO|^GyWbcpEpqMsqMsjilzX^
+
+# Mission 21
+
+    ################
+    # MISSION 0x21 #
+    ################
+
+    ## EN ##
+    User clio hates spaces. 
+
+    ## ES ##
+    La usuaria clio odia los espacios.
+
+
+![image](./assets/level21_sudo.png)
+
+We have the read permission 
+
+```bash 
+#!/bin/bash
+echo File to compare:!
+read differences
+IFS=0 read file1 file2 <<< "$differences"
+
+if [[ "$differences" =~ \ |\' ]]
+then
+   echo "No spaces!!"
+else
+/usr/bin/diff $file1 $file2
+fi
+```
+
+So instead of the default space IFS the program uses 0
+
+![image](./assets/level21_flag.png)
+
+| user | password | flag
+|------|----------|-----
+|clio|cqJqRPaUtuoUYXbaxnZq|^XUJbvPwAZYgoUgkpeSv^
+
+# Mission 22
+
+    ################
+    # MISSION 0x22 #
+    ################
+
+    ## EN ##
+    The user cybele uses her lastname as a password.
+
+    ## ES ##
+    La usuaria cybele usa su apellido como password.
+
+![image](./assets/level22_passwd.png)
+
+
+| user | password | flag
+|------|----------|-----
+|cybele|UICacOPmJMWbKyPwNZod|^bTsTIOmJELcaxEiIaCA^
+
+# Mission 223
+
+    ################
+    # MISSION 0x23 #
+    ################
+
+    ## EN ##
+    User cynthia sees things that others dont.
+
+    ## ES ##
+    La usuaria cynthia ve cosas que el resto no ven.
+
+
