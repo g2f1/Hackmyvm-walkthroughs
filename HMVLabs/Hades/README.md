@@ -620,6 +620,7 @@ I discovered a PNG image and tested it with several steganography tools such as 
     ## ES ##
     La usuaria daphne nos dijo una vez: Gemini? gem-evil.hmv? WTF?
 
-googling `gemini` and digging deeper and escaping information about `gemini model from google`. I found out that Gemini is an application-layer internet communication protocol for accessing remote documents that uses port **1965** and similar to HTTP.
+googling `gemini` and digging deeper to escape information about `gemini model from google`. I found out that Gemini is an application-layer internet communication protocol for accessing remote documents that uses port **1965** and similar to HTTP.
 
 When scanning the target for open ports, I identified **1965**, which confirmed that the machine is running the **Gemini protocol**.
+
