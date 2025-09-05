@@ -624,3 +624,25 @@ googling `gemini` and digging deeper to escape information about `gemini model f
 
 When scanning the target for open ports, I identified **1965**, which confirmed that the machine is running the **Gemini protocol**.
 
+![image](./assets/level24_etc.png)
+
+I use `ssh -p 6666 acantha@hades.hackmyvm.eu -L 1965:127.0.0.1:1965` to forward all requests from `localhost:1965` through SSH to `hades.hackmyvm.eu` on port `1965`.
+
+![image](./assets/level24_flag.png)
+
+| user | password | flag
+|------|----------|-----
+|daphne|EkdtKuXCJjlFKFpKgddX|^ieOhnUKZlYZSSrIPgaJ^
+
+# Mission 25
+
+    ################
+    # MISSION 0x25 #
+    ################
+
+    ## EN ##
+    The user delia has a good memory, she only has to see her password for a few seconds to remember it.
+
+    ## ES ##
+    La usuaria delia tiene buena memoria, solo tiene que ver unos segundos su password para recordarlo.
+
