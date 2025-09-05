@@ -587,7 +587,7 @@ So instead of the default space IFS the program uses 0
 |------|----------|-----
 |cybele|UICacOPmJMWbKyPwNZod|^bTsTIOmJELcaxEiIaCA^
 
-# Mission 223
+# Mission 23
 
     ################
     # MISSION 0x23 #
@@ -599,4 +599,27 @@ So instead of the default space IFS the program uses 0
     ## ES ##
     La usuaria cynthia ve cosas que el resto no ven.
 
+I discovered a PNG image and tested it with several steganography tools such as **steghide**, **binwalk**, and others, but none revealed any hidden data.  Finally, by analyzing it with [StegOnline](https://georgeom.net/StegOnline/upload) and inspecting the **bit planes**, I found the password hidden in the **Red 0** plane.  
 
+![image](./assets/level23_stegonline.png)
+
+
+| user | password | flag
+|------|----------|-----
+|cynthia|QHLjXdGSiRShtWpMwFjj|^ZRSCKeYYlHkCEiHsEOI^
+
+# Mission 24 
+
+    ################
+    # MISSION 0x24 #
+    ################
+
+    ## EN ##
+    User daphne once told us: Gemini? gem-evil.hmv? WTF?
+
+    ## ES ##
+    La usuaria daphne nos dijo una vez: Gemini? gem-evil.hmv? WTF?
+
+googling `gemini` and digging deeper and escaping information about `gemini model from google`. I found out that Gemini is an application-layer internet communication protocol for accessing remote documents that uses port **1965** and similar to HTTP.
+
+When scanning the target for open ports, I identified **1965**, which confirmed that the machine is running the **Gemini protocol**.
