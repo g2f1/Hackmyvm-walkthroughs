@@ -646,3 +646,18 @@ I use `ssh -p 6666 acantha@hades.hackmyvm.eu -L 1965:127.0.0.1:1965` to forward 
     ## ES ##
     La usuaria delia tiene buena memoria, solo tiene que ver unos segundos su password para recordarlo.
 
+```bash
+#!/bin/bash
+#OUTPUT="PASSWORD_DELIA" <-- UPDATE IT!
+secretfile=$(mktemp /tmp/XXX)
+chmod 664 "$secretfile"
+exec 5>"$secretfile"
+echo $OUTPUT >&5
+sleep 0.01
+rm "$secretfile"
+```
+
+This script briefly writes the password for the user `delia` into a temporary file, then deletes it almost immediately. The file’s name is generated with three random characters, so its exact name is unpredictable. Even if we try to read all files with three-character names in `/tmp`, the password won’t be found because the file is removed almost instantly.
+
+
+
