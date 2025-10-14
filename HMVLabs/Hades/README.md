@@ -478,7 +478,7 @@ A program named `writeme` was identified. Upon execution, the following message 
 
 They something about `write`. The latter allows you to communicate with other users, by copying lines from your terminal to theirs. To permit incoming messages from other users, the command mesg y is executed.
 
-![image](./assets/level18.png)
+![image](./assets/level18_mesg.png)
 
 | user | password | flag
 |------|----------|-----
@@ -658,6 +658,7 @@ rm "$secretfile"
 ```
 
 This script briefly writes the password for the user `delia` into a temporary file, then deletes it almost immediately. The file’s name is generated with three random characters, so its exact name is unpredictable. Even if we try to read all files with three-character names in `/tmp`, the password won’t be found because the file is removed almost instantly.
+
 
 
 
