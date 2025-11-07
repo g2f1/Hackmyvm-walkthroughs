@@ -669,7 +669,18 @@ Attempting to retrieve the PID of the running program and display the content of
 
 ![image](./assets/level25_perm.png)
 
+The program uses `mktemp` to create files with random three-character names. If a directory or file with the generated name already exists, mktemp tries another combination until it succeeds. I use the following bash script to create every possible files in the /tmp folder(26 for lowecase + 26 for uppercase + 10 for numbers)^3 = 63^3 = 238328 possible combinations.
 
+```bash
+chars=( {a..z} {A..Z} {0..9} )
+for a in "${chars[@]}"; do
+  for b in "${chars[@]}"; do
+    for c in "${chars[@]}"; do
+      > "/tmp/${a}${b}${c}"   # fast create/truncate
+    done
+  done
+done
+```
 
 
 
