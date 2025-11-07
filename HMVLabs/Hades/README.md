@@ -657,9 +657,17 @@ sleep 0.01
 rm "$secretfile"
 ```
 
-This script briefly writes the password for the user `delia` into a temporary file, then deletes it almost immediately. The file’s name is generated with three random characters, so its exact name is unpredictable. Even if we try to read all files with three-character names in `/tmp`, the password won’t be found because the file is removed almost instantly.
+This script briefly writes the password for the user `delia` into a temporary file, then deletes it almost immediately. The file’s name is generated with three random characters, so its exact name is unpredictable. Even if we try to read all files with three-character names in `/tmp`, the password won’t be found because the file is removed almost instantly. Tried to print the content of all the files in `/tmp` but I failed.
 
+![image](./assets/level25_try.png)
 
+The user `daphne` can run a script called `new.sh` as the user `delia`
+
+![image](./assets/level25_sudo.png)
+
+Attempting to retrieve the PID of the running program and display the content of its file descriptor 5 using `cat /proc/<pid>/fd/5`. However, this fails because the current user does not have the required permissions.  
+
+![image](./assets/level25_vid1.mp4)
 
 
 
