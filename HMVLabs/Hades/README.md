@@ -667,7 +667,8 @@ The user `daphne` can run a script called `new.sh` as the user `delia`
 
 Attempting to retrieve the PID of the running program and display the content of its file descriptor 5 using `cat /proc/<pid>/fd/5`. However, this fails because the current user does not have the required permissions.  
 
-[![Video](h)](./assets/level25_vid1.mp4)
+[![Video]()](./assets/level25_vid1.mp4)
+
 
 
 
