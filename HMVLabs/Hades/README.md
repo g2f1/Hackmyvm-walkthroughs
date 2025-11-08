@@ -716,7 +716,7 @@ Connecting as the new user gives us a weird shell.
 
 So, the user Demeter is using a different language. I searched the web and found information about character banks. Currently, the terminal emulator is using a box-drawing character set, but I need it to use the ASCII set. This can be achieved with `printf '\033(B'.
 
-![image](./assets/level26_sol.png)
+![image](./assets/level26-sol.png)
 
 now we run the shopass program.
 
@@ -737,4 +737,5 @@ now we run the shopass program.
     
     ## ES ##
     La usuaria echo permuta.
+
 
