@@ -738,4 +738,19 @@ now we run the shopass program.
     ## ES ##
     La usuaria echo permuta.
 
+demeter can run `ptx` as echo 
+
+![image](./assets/level27_sudo.png)
+
+from the man page 
+
+![image](./assets/level27_man.png)
+
+So we can simply use it to run the content of /pwned/echo/flagz.txt
+
+![image](./assets/level27_flagz.png)
+
+| user | password | flag
+|------|----------|-----
+|echo|GztROerShmiyiCIlfepG|^abeDeOxlPMAABepeBHy^
 
