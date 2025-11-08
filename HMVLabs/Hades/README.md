@@ -754,3 +754,41 @@ So we can simply use it to run the content of /pwned/echo/flagz.txt
 |------|----------|-----
 |echo|GztROerShmiyiCIlfepG|^abeDeOxlPMAABepeBHy^
 
+# Mission 28
+
+    ################
+    # MISSION 0x28 #
+    ################
+    
+    ## EN ##
+    The user eos can see the sounds.
+    
+    ## ES ##
+    La usuaria eos puede ver los sonidos.
+
+We're given a wav file. I copy it to my machine for analysis.
+
+Using audacity, I draw the spectogram 
+
+![image](./assets/level28_sol.png)
+
+| user | password | flag
+|------|----------|-----
+|eos|CWBKRQX|^OsoLytPlXEjvinhCNyy^
+
+# Mission 29
+
+    ################
+    # MISSION 0x29 #
+    ################
+    
+    ## EN ##
+    The user gaia is very careful saving her passwords.
+    
+    ## ES ##
+    La usuaria gaia es muy precavida guardando sus passwords.
+
+
+
+
+
