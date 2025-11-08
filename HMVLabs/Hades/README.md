@@ -692,10 +692,49 @@ I try delete one file and run it again
 
 | user | password | flag
 |------|----------|-----
-|delia|bNCvocyOpoMVeCtxrhTt|
+|delia|bNCvocyOpoMVeCtxrhTt|^QfaHPyEqMepsOdMxQCQ^
 
+# Mission 26
 
+Connecting as the new user gives us a weird shell. 
 
+![image](./assets/level26_inv.png)
 
+`scp` helps to get the content of mission.txt and flagz.txt.
 
+![image](./assets/level26_flagz.png)
+
+    ################
+    # MISSION 0x26 #
+    ################
+
+    ## EN ##
+    User demeter reads in another language.
+
+    ## ES ##
+    La usuaria demeter lee en otro idioma.
+
+So, the user Demeter is using a different language. I searched the web and found information about character banks. Currently, the terminal emulator is using a box-drawing character set, but I need it to use the ASCII set. This can be achieved with `printf '\033(B'.
+
+![image](./assets/level26_sol.png)
+
+now we run the shopass program.
+
+![image](./assets/level26_showpass.png)
+
+| user | password | flag
+|------|----------|-----
+|demeter|FkyuXkkJNONDChoaKzOI|^JiviWHRVRZLSfjBuwAi^
+
+# Mission 27 
+
+    ################
+    # MISSION 0x27 #
+    ################
+    
+    ## EN ##
+    The user echo permute.
+    
+    ## ES ##
+    La usuaria echo permuta.
 
