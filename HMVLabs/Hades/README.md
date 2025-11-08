@@ -681,6 +681,13 @@ for a in "${chars[@]}"; do
   done
 done
 ```
+Reruning the script gives this
+
+![image](./assets/level25_run.png)
+
+I try delete one file and run it again 
+
+![image](./assets/level25_.png)
 
 
 
