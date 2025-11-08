@@ -788,6 +788,34 @@ Using audacity, I draw the spectogram
     ## ES ##
     La usuaria gaia es muy precavida guardando sus passwords.
 
+They gave us a kbdx file. googling it I found that a KDBX file is a password database created by KeePass Password Safe, a free password manager for Windows. It stores an encrypted database of passwords that can be viewed only using a master password set by the user.
+
+The file is protected with a password. So I downloaded it to crack it offline using john
+
+![image](./assets/level29_crack.png)
+
+Using the cracked password I retrieved the password for the user `gaia`.
+
+![image](./assets/level29_sol.png)
+
+| user | password | flag
+|------|----------|-----
+|gaia|sbUcegcdYTTWzTKojzgm|^NWelryzwJowjEaDWEiY^
+
+# Mission 30
+
+    ################
+    # MISSION 0x30 #
+    ################
+    
+    ## EN ##
+    User halcyon wants all the powah.
+    
+    ## ES ##
+    La usuaria halcyon quiere todo el powah.
+
+
+
 
 
 
