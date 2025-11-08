@@ -687,7 +687,13 @@ Reruning the script gives this
 
 I try delete one file and run it again 
 
-![image](./assets/level25_.png)
+![image](./assets/level25_final.png)
+
+
+| user | password | flag
+|------|----------|-----
+|delia|bNCvocyOpoMVeCtxrhTt|
+
 
 
 
