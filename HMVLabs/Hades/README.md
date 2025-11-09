@@ -837,5 +837,17 @@ When we attempt it, the system prompts for a password. I tried the password foun
 |------|----------|-----
 |halcyon|cuMRRameGdmhVxHcYYYs|^YBkkiwOiBVdzLnxXPdU^
 
+# Mission 31
+
+    ################
+    # MISSION 0x31 #
+    ################
+    
+    ## EN ##
+    The user hebe has one 'magicword' to get her password using http://localhost/req.php 
+    
+    ## ES ##
+    La usuaria hebe tiene una 'magicword' para obtener su password usando http://localhost/req.php
+
 
 
