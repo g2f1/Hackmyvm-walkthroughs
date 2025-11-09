@@ -849,5 +849,26 @@ When we attempt it, the system prompts for a password. I tried the password foun
     ## ES ##
     La usuaria hebe tiene una 'magicword' para obtener su password usando http://localhost/req.php
 
+using Curl we get "No". Trying with a `magicword` as a param we get the same response.
 
+![image](./assets/level31_curl1.png)
 
+So I keep testing for values of `magicrowd`. 
+
+![image](./assets/level31_curl2.png)
+
+| user | password | flag
+|------|----------|-----
+|hebe|tOlbuBLjFWntVDNmjHIG|^BAWnwGCghvcBbbRcZVd^
+
+# Mission 32
+
+    ################
+    # MISSION 0x32 #
+    ################
+    
+    ## EN ##
+    User hera refuses to use Discord, she prefer an older and open source service.
+    
+    ## ES ##
+    La usuaria hera se niega a usar Discord, prefiere un medio mas antiguo y abierto.
