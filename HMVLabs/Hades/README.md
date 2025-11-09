@@ -814,9 +814,28 @@ Using the cracked password I retrieved the password for the user `gaia`.
     ## ES ##
     La usuaria halcyon quiere todo el powah.
 
+![image](./assets/level30_ls.png)
+
+We are able to read hpass1.txt, but hpass2.txt is not accessible. However, if we were members of the powah group, we would gain read access to hpass2.txt, as the file’s group permissions would allow it.
+
+![image](./assets/level30-pass1.png)
+
+`gpasswd` is used to manage groups via `/etc/group` and `/etc/gshadow`. However, adding members to a group with gpasswd requires being a group administrator, which is why it does not work for my user.
+
+![image](./assets/level30_gpasswd.png)
+
+To use `newgrp` without a password the user should be a member of that group (secondary group). It's not the case in this situation.(for more info about newgrp : ![newgrp](https://www.computerhope.com/unix/unewgrp.htm))
+
+![image](./assets/level30_groups.png)
+
+When we attempt it, the system prompts for a password. I tried the password found in hpass1.txt, and it succeeded.
+
+![image](./assets/level30_sol.png)
 
 
-
+| user | password | flag
+|------|----------|-----
+|halcyon|cuMRRameGdmhVxHcYYYs|^YBkkiwOiBVdzLnxXPdU^
 
 
 
