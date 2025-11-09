@@ -872,3 +872,8 @@ So I keep testing for values of `magicrowd`.
     
     ## ES ##
     La usuaria hera se niega a usar Discord, prefiere un medio mas antiguo y abierto.
+
+using a port scanner I discover an open ports related to IRC.
+
+![image](./assets/level32_ports.png)
+
