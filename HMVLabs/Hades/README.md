@@ -824,7 +824,7 @@ We are able to read hpass1.txt, but hpass2.txt is not accessible. However, if we
 
 ![image](./assets/level30_gpasswd.png)
 
-To use `newgrp` without a password the user should be a member of that group (secondary group). It's not the case in this situation.(for more info about newgrp : ![newgrp](https://www.computerhope.com/unix/unewgrp.htm))
+To use `newgrp` without a password the user should be a member of that group (secondary group). It's not the case in this situation.(for more info about newgrp : [newgrp](https://www.computerhope.com/unix/unewgrp.htm))
 
 ![image](./assets/level30_groups.png)
 
@@ -876,4 +876,57 @@ So I keep testing for values of `magicrowd`.
 using a port scanner I discover an open ports related to IRC.
 
 ![image](./assets/level32_ports.png)
+
+Connecting to it using nc then registring following the instruction [here](https://www.verylazytech.com/network-pentesting/irc-ports-194-6667-6660-7000). Now we get access to an IRC server.
+
+![image](./assets/level32_register.png)
+
+We move to test some commands. Listing the existing channels reveals the password for the user hera.
+
+![image](./assets/level32_list.png)
+
+| user | password | flag
+|------|----------|-----
+|hera|JzpyRXRzWoHKZwgWzleM|^GaIAyNGsSRYClSuzVLX^
+
+# Mission 33
+
+    ################
+    # MISSION 0x33 #
+    ################
+    
+    ## EN ##
+    User hermione would like to know what hera was doing. 
+    
+    ## ES ##
+    A la usuaria hermione le gustaria saber que hacia hera.
+
+Using history we get a list of what the user hera was doing in the cli, we found a hidden flag. 
+
+![image](./assets/level33_history.png)
+
+But the password for hermione is stored in the file `/usr/hera`
+
+![image](./assets/level33_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|hermione|vzhOebSSplFoXPKxwtqU|^dLcEkLNgdDvOlxtPhjh^
+
+# Mission 34
+
+    ################
+    # MISSION 0x34 #
+    ################
+    
+    ## EN ##
+    User hero only talks to some groups.
+    
+    ## ES ##
+    La usuaria hero solo se habla con algunos grupos.
+
+We found an executable that verify the current gid of the user trying to run it. If the gid match 6666 the program will probably print the password if not it said that it only trust the group 6666. Checking the groups of the current user I found that I'm a memeber of the grouo beast with gid 
+
+
+
 
