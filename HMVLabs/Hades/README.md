@@ -929,6 +929,22 @@ We found an executable that verify the current gid of the user trying to run it.
 
 ![image](./assets/level34_sol.png)
 
+| user | password | flag
+|------|----------|-----
+|hero|vlImTDSGnTMwLFgRWCOc|^KUEUoYgCWKlUTpywGeK^
+
+# Mission 35
+
+    ################
+    # MISSION 0x35 #
+    ################
+    
+    ## EN ##
+    User hestia likes to keep the screen clean.
+    
+    ## ES ##
+    A la usuaria hestia le gusta mantener la pantalla limpia.
+
 
 
 
