@@ -925,7 +925,10 @@ But the password for hermione is stored in the file `/usr/hera`
     ## ES ##
     La usuaria hero solo se habla con algunos grupos.
 
-We found an executable that verify the current gid of the user trying to run it. If the gid match 6666 the program will probably print the password if not it said that it only trust the group 6666. Checking the groups of the current user I found that I'm a memeber of the grouo beast with gid 
+We found an executable that verify the current gid of the user trying to run it. If the gid match 6666 the program will probably print the password if not it said that it only trust the group 6666. Checking the groups of the current user I found that I'm a member of the group beast whose gid is 6666. So I use `newgrp` to change my primary group then I run the program 
+
+![image](./assets/level34_sol.png)
+
 
 
 
