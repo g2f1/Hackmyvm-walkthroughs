@@ -945,6 +945,36 @@ We found an executable that verify the current gid of the user trying to run it.
     ## ES ##
     A la usuaria hestia le gusta mantener la pantalla limpia.
 
+A program with the setuid set is given.
+
+![image](./assets/level35_ls.png)
+
+When I run it, I discover that i will be added to another group(her0) and it become my principal group.
+
+![image](./assets/level35_cleaner.png)
+
+This gives us the password for the next user.
+
+| user | password | flag
+|------|----------|-----
+|hestia|opTNnZQAuFJsauNPHXVq|^KUEUoYgCWKlUTpywGeK^
+
+# Mission 36
+
+    ################
+    # MISSION 0x36 #
+    ################
+    
+    ## EN ##
+    User ianthe has left us her own less.
+    
+    ## ES ##
+    La usuaria ianthe nos ha dejado su propio less.
+
+
+
+
+
 
 
 
