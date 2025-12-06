@@ -953,7 +953,9 @@ When I run it, I discover that i will be added to another group(her0) and it bec
 
 ![image](./assets/level35_cleaner.png)
 
-This gives us the password for the next user.
+I search for all files that has her0 as group, and this gives us the password for the next user.
+
+![image](./assets/level35_find.png)
 
 | user | password | flag
 |------|----------|-----
@@ -973,14 +975,15 @@ This gives us the password for the next user.
 
 We were given a binary named **`less`**, which is clearly not the real `less` command. I noticed that it has the **setuid** bit set for the next user. Because of that, this custom `less` binary runs with the UID of the user **ianthe**.
 
-![image](./assets/level36_ls.png)
+![image](./assets/level36_test.png)
 
 Running `id` from inside the custom `less` binary shows that it still uses my own UID. The program maybe drops its elevated privileges. We can't also read **/pwned/ianthe/flagz.txt** because it's owned by `root`, not `ianthe`. I search for files owned by ianthe 
 
-![image](./assets/level36.png)
+![image](./assets/level36_find.png)
 | user | password | flag
 |------|----------|-----
 |ianthe|DphioLqgVIIFclTwBsMP|^SdoibXIPAdqIdzDrYId^
+
 
 
 
