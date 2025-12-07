@@ -980,11 +980,96 @@ We were given a binary named **`less`**, which is clearly not the real `less` co
 Running `id` from inside the custom `less` binary shows that it still uses my own UID. The program maybe drops its elevated privileges. We can't also read **/pwned/ianthe/flagz.txt** because it's owned by `root`, not `ianthe`. I search for files owned by ianthe 
 
 ![image](./assets/level36_find.png)
+
 | user | password | flag
 |------|----------|-----
 |ianthe|DphioLqgVIIFclTwBsMP|^SdoibXIPAdqIdzDrYId^
 
+# Mission 37
 
+    ################
+    # MISSION 0x37 #
+    ################
+    
+    ## EN ##
+    Seems that irene is developing an auth system http://localhost/irene_auth.php
+    
+    ## ES ##
+    Parece que irene esta desarrollando algun sistema de autenticacion http://localhost/irene_auth.php
+    
+They gave us this prototype for the real php file
+
+```php
+<?php
+    session_start();
+    $allowed_domains = array("hackmyvm.hmv");
+    if (in_array($_SERVER['HTTP_ORIGIN'], $allowed_domains)) {
+        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+        header("Access-Control-Allow-Credentials: true");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
+        $_SESSION['loggedin'] = isset($_SESSION['loggedin']) ? $_SESSION['loggedin'] : false;
+
+        if (isset($_POST['username']) && isset($_POST['password'])) {
+            if ($_POST['username'] == 'admin' && $_POST['password'] == 'xxxxx') {
+                $_SESSION['loggedin'] = true;
+                header('Location: index.php');
+            } else {
+                $error = 'Invalid username or password';
+            }
+        }
+
+        if ($_SESSION['loggedin'] == true) {
+            $flag = "XXXXX";
+            echo $flag;
+        } else {
+            echo '
+            <form method="post" action="">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <input type="submit" value="Login">
+            </form>
+            ';
+
+            if (isset($error)) {
+                echo '<p>' . $error . '</p>';
+            }
+        }
+    } else {
+        header("HTTP/1.1 403 Forbidden");
+    }
+?> 
+
+```
+
+The PHP script implements a simple login system with session handling and CORS protection. It only allows requests from the domain `hackmyvm.hmv`. Users must provide the correct credentials to set `$_SESSION['loggedin']` to `true`. Once logged in, the script reveals a flag.
+
+I try the password admin and it works.
+
+![image](./assets/level36_find.png)
+
+| user | password | flag
+|------|----------|-----
+|irene|TDyuLyWLDksEhgmAYDJC|^ZACnrFArVosWGJNfPkN^
+
+# Mission 38
+
+    ################
+    # MISSION 0x38 #
+    ################
+    
+    ## EN ##
+    User iris hates some characters.
+    
+    ## ES ##
+    La usuaria iris odia algunos caracteres.
+
+    
 
 
 
