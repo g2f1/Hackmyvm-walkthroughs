@@ -1169,3 +1169,38 @@ So I changed my approach. The following command got the job done.
 |------|----------|-----
 |maia|GIVEMEANEWMIND|^GWsDBTCiXdZDNtRzVGt^
 
+# Mission 42
+
+    ################
+    # MISSION 0x42 #
+    ################
+    
+    ## EN ##
+    It seems that user nephele has broken the image.
+    
+    ## ES ##
+    Parece que la usuaria nephele ha roto la imagen.
+
+They provided us with a corrupted PNG file. I downloaded it to analyze it on my machine. Using **ghex**, I reconstructed the file header and successfully recovered the image.
+
+![image](./assets/level42_ghex.png)
+
+![image](./assets/level42_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|nephele|rZtaitCxlEIRxBayVpgZ|^oSiWofNrDjNWbcAqMAx^
+
+# Mission 43 
+    
+    ################
+    # MISSION 0x43 #
+    ################
+    
+    ## EN ##
+    The nyx user visits some websites that we do not know.
+    
+    ## ES ##
+    La usuaria nyx visita algunas webs que no conocemos.
+
+
