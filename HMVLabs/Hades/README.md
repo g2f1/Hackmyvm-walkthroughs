@@ -1051,7 +1051,7 @@ The PHP script implements a simple login system with session handling and CORS p
 
 I try the password admin and it works.
 
-![image](./assets/level36_find.png)
+![image](./assets/level37_pass.png)
 
 | user | password | flag
 |------|----------|-----
@@ -1069,13 +1069,102 @@ I try the password admin and it works.
     ## ES ##
     La usuaria iris odia algunos caracteres.
 
+They provided us with a program that filters the user input and then executes a command with it, as long as the input doesn’t contain any forbidden characters.
+
+![image](./assets/level38_hate.png)
+
+After testing I found that the program don't accept the following charachters : a,e,o,.,*,t. I tried to use "?" to match the remaining characters but it can't read the `flagz.txt` in the home directory of `iris`, but it can read it from the currrent directory. So the globbing works and maybe there is no file `flagz.txt` in that directory 
+
+![image](./assets/level38_test.png)
+
+Now i search for files owned by `iris` and are ready to read by her.
+
+![image](./assets/level38_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|iris|FiqGNcXumTKwLTPRqXMh|^xXcULtRBXxcHIUVxtXT^
+
+# Mission 39
+
+    ################
+    # MISSION 0x39 #
+    ################
     
+    ## EN ##
+    User kore likes to navigate! 
+    
+    ## ES ##
+    A la usuaria kore le gusta navegar!
 
+This find reveal that the user `kore` uses w3m which is a free and open source text-based web browser. 
 
+![image](./assets/level39_find.png)
 
+So we use it to read the content of files containing the password for the user `kore`.
 
+![image](./assets/level39_pass.png)
 
+| user | password | flag
+|------|----------|-----
+|kore|mdAXiSXteTPiGGTpmajP|^FEYohPSMjrxKzdLNxkQ^
 
+# Mission 40
 
+    ################
+    # MISSION 0x40 #
+    ################
+    
+    ## EN ##
+    User leda always wanted to edit videos.
+    
+    ## ES ##
+    La usuaria leda siempre quiso editar videos.
 
+I found that the `ffmpeg` has the setuid bit set to the user `leda`. 
 
+![image](./assets/level40_find.png)
+
+So I google for a way to read files belonging to leda with it. 
+
+![image](./assets/level40_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|leda|NODEVILINHELL|^wHseqgzsZUNyruSnxnl^
+
+# Mission 41
+
+    ################
+    # MISSION 0x41 #
+    ################
+    
+    ## EN ##
+    User maia hears everything. 
+    
+    ## ES ##
+    La usuaria maia lo oye todo.
+
+We can run `sudo` as the user **maia**.
+
+![image](./assets/level41_sudo.png)
+
+`espeak` is a Linux command-line tool that converts text into speech.
+
+![image](./assets/level41_find.png)
+
+I suspected that `/etc/maia.txt` contained the password, so I tried using `espeak` to convert the text file into a WAV audio file and then transcribe its content using AI.
+
+![image](./assets/level41_wav.png)
+
+Unfortunately, I wasn’t able to retrieve anything meaningful.
+
+![image](./assets/level41_output.png)
+
+So I changed my approach. The following command got the job done.
+
+![image](./assets/level41_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|maia|givemeanewmind|^wHseqgzsZUNyruSnxnl^
