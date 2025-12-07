@@ -1167,4 +1167,5 @@ So I changed my approach. The following command got the job done.
 
 | user | password | flag
 |------|----------|-----
-|maia|givemeanewmind|^wHseqgzsZUNyruSnxnl^
+|maia|GIVEMEANEWMIND|^GWsDBTCiXdZDNtRzVGt^
+
