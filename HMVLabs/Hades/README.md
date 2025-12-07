@@ -1203,4 +1203,83 @@ They provided us with a corrupted PNG file. I downloaded it to analyze it on my 
     ## ES ##
     La usuaria nyx visita algunas webs que no conocemos.
 
+![image](./assets/level43_pass.png)
+
+| user | password | flag
+|------|----------|-----
+|nyx|HXisrOPSdTcSSTEyyaLn|^BdYvJtfaTyfaliZPBkG^
+
+# Mission 44
+    
+    ################
+    # MISSION 0x44 #
+    ################
+    
+    ## EN ##
+    User pallas has her desktop tuned with conky.
+    
+    ## ES ##
+    La usuaria pallas tiene su desktop tuneado con conky.
+
+Conky is a system monitor software for the X Window System, Wayland and other things, too. I found that I can run `conky` as the user `pallas`.
+
+![image](./assets/level44_sudo.png)
+
+I use a custom config file to print the content of `/pwned/pallas/flagz.txt`
+
+![image](./assets/level44_conf.png)
+
+this config file made `conky` print the content of flagz.txt in the terminal once and then exit.
+
+![image](./assets/level44_flag.png)
+
+| user | password | flag
+|------|----------|-----
+|pallas|wWxyXnNbmjxNMEAIjbjT|^irzKewMCfnhnIMTCJlW^
+
+# Mission 45
+
+    ################
+    # MISSION 0x45 #
+    ################
+    
+    ## EN ##
+    User pandora likes squares.
+    
+    ## ES ##
+    A la usuaria pandora le gustan los cuadrados.
+
+We can use `qrencode` to create a qr code of `/pwned/pandora/flagz.txt. Since we can run it as the user pandora.
+
+![image](./assets/level45_sudo.png)
+
+using this commad ```bash sudo -u pandora qrencode -o /var/tmp/test.jpg -r /pwned/pandora/flagz.txt ```, I create the qr code and I downloaded it to my machine.
+
+![image](./assets/test.jpg)
+
+![image](./assets/level45_flag.jpg)
+
+| user | password | flag
+|------|----------|-----
+|pandora|HhVHfmbBIiZbZSgcgadh|^pjDuPNQVgyhgigOIiwm^
+
+# Mission 46
+
+    ################
+    # MISSION 0x46 #
+    ################
+    
+    ## EN ##
+    User penelope lets us do something...
+    
+    ## ES ##
+    La usuaria penelope nos permite hacer algo...
+
+
+
+
+    
+    
+
+
 
