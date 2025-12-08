@@ -1275,11 +1275,34 @@ using this commad ```bash sudo -u pandora qrencode -o /var/tmp/test.jpg -r /pwne
     ## ES ##
     La usuaria penelope nos permite hacer algo...
 
+I found two intersting files that belongs to `penelope`. The first one is the well knnown `getty` with setuid bit set and the other one is a simple text file that maybe it contains the password and we need to find a way to read it using `getty`
 
+![image](./assets/level46_find.jpg)
+
+I used getty with the option -f to precise the issue file. I also mixed it with --show-issue to only show the content of issue and exit. 
+
+![image](./assets/level46_pass.jpg)
+
+| user | password | flag
+|------|----------|-----
+|penelope|anoRxVKulaoMNKMrddVe|^OGaiNcpusBXCHrDZjwN^
+
+# Mission 47
+
+    ################
+    # MISSION 0x47 #
+    ################
+    
+    ## EN ##
+    If we give a username (user) and password (password) at http: //localhost/request.php, user phoebe may give us her password. 
+    
+    ## ES ##
+    Si damos un usuario (user) y password (password) en http://localhost/request.php puede que phoebe nos de su password.
 
 
     
     
+
 
 
 
