@@ -1372,6 +1372,46 @@ This command create an image named output.png with a white background and then p
 
 # Mission 49
 
+    ################
+    # MISSION 0x49 #
+    ################
+    
+    ## EN ##
+    User selene wants to tell us something...
+    
+    ## ES ##
+    La usuaria selene nos quiere decir algo...
+
+They give us a pcap file. I downloaded to my machine to explore its content with `wirehsark`
+
+![image](./assets/level49_pcap.png)
+
+After following the TCP stream, I found that a client requested a file named id.zip, and the server responded by sending that file.
+
+![image](./assets/level49_wireshark1.png)
+
+We can extract the content of this file from the pcap file.
+
+![image](./assets/level49_wireshark2.png)
+
+The archive contains a file called id_rsa which represnt a private key that we can use to login as `selene`
+
+| user | password | flag
+|------|----------|-----
+|rhea|zZqEimsDlLPqIyqzNyWB|^VgZLrvZyzGYvqegkslh^
+
+# Mission 50
+
+    ################
+    # MISSION 0x50 #
+    ################
+    
+    ## EN ##
+    The user maria ... I think I have seen her password.
+    
+    ## ES ##
+    La usuaria maria... creo haber visto su password.
+
 
 
 
@@ -1380,6 +1420,7 @@ This command create an image named output.png with a white background and then p
 
     
     
+
 
 
 
