@@ -1412,14 +1412,35 @@ The archive contains a file called id_rsa which represnt a private key that we c
     ## ES ##
     La usuaria maria... creo haber visto su password.
 
+This mission is a bit ambigious. I first tried passwords I already found in **mission 47** but nothing works. I decided to ask the community and someone said smtg about the user hera. I check and I found a .ssh directory that contains a private key.
+
+![image](./assets/level50_pk.png)
+
+I use it to connect as the user `maria`. It works.
+
+and this is the content of the file congrats
+
+    ################
+    #   CONGRATS   #
+    ################
+    
+    ## EN ##
+    Congrats You did it!! If you like it or you have some ideas, just give us your feedback!! Or maybe this is not the last level?
+    
+    ## ES ##
+    Felicidades, lo conseguiste!! Si te ha gustado o tienes alguna idea recuerda darnos tu feedback!! O este no es el ultimo nivel?
 
 
+| user | password | flag
+|------|----------|-----
+|maria|KZTKpCZzFqmaahwyzuKo|^zBKjbLoxNAQFKeouNnm^
 
 
 
 
     
     
+
 
 
 
