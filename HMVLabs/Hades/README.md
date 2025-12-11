@@ -1081,6 +1081,8 @@ Now i search for files owned by `iris` and are ready to read by her.
 
 ![image](./assets/level38_pass.png)
 
+PS : `flagz.txt` does exist, but the problem is when we run `hatechar` the uid is set to the user `iris` but the gid and the groups are set according to the user `irene` and when we try to access the file `flagz.txt` belonging to `root` and the group  `iris` we encouter permission denied due to the fact that this file is owned by the root and the group iris and they are the only entities that can read that file but the process(created by running hatechars) don't have the adequate uid, gid or groups that make him read that file. 
+
 | user | password | flag
 |------|----------|-----
 |iris|FiqGNcXumTKwLTPRqXMh|^xXcULtRBXxcHIUVxtXT^
@@ -1440,6 +1442,7 @@ and this is the content of the file congrats
 
     
     
+
 
 
 
