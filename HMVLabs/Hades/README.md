@@ -1257,7 +1257,7 @@ using this commad ```bash sudo -u pandora qrencode -o /var/tmp/test.jpg -r /pwne
 
 ![image](./assets/test.jpg)
 
-![image](./assets/level45_flag.jpg)
+![image](./assets/level45_flag.png)
 
 | user | password | flag
 |------|----------|-----
@@ -1277,11 +1277,11 @@ using this commad ```bash sudo -u pandora qrencode -o /var/tmp/test.jpg -r /pwne
 
 I found two intersting files that belongs to `penelope`. The first one is the well knnown `getty` with setuid bit set and the other one is a simple text file that maybe it contains the password and we need to find a way to read it using `getty`
 
-![image](./assets/level46_find.jpg)
+![image](./assets/level46_find.png)
 
 I used getty with the option -f to precise the issue file. I also mixed it with --show-issue to only show the content of issue and exit. 
 
-![image](./assets/level46_pass.jpg)
+![image](./assets/level46_pass.png)
 
 | user | password | flag
 |------|----------|-----
@@ -1301,9 +1301,9 @@ I used getty with the option -f to precise the issue file. I also mixed it with 
 
 I used `find` to search for anyhting intersting. And I found that some users before me created two files : user.txt and pass.txt. They contain a list of previous owned users and their corresponding passwords. So basically they tried to bruteforcing.
 
-![image](./assets/level47_p.jpg)
+![image](./assets/level47_p.png)
 
-![image](./assets/level47_pp.jpg)
+![image](./assets/level47_pp.png)
 
 I use this baah script to bruteforce the the user and pass. What it does is just lopping over the list of passwords and usernames if the web app returns anything rather than "NOTHING" we test if that password already in the pass.txt if not that's our potentail password.
 
@@ -1332,7 +1332,7 @@ done < user.txt
 
 ```
 
-![image](./assets/level47_pass.jpg)
+![image](./assets/level47_pass.png)
 
 I keep testing these passowrds until I found the right one.
 
@@ -1352,7 +1352,7 @@ I keep testing these passowrds until I found the right one.
     ## ES ##
     A la usuaria rhea le gustan las imagenes.
 
-![image](./assets/level48_sudo.jpg)
+![image](./assets/level48_sudo.png)
 
 `convert` is a command line utility that's used to convert between image formats as well as resize an image. I try to read the content of `/pwned/rhea/flagz.txt` by adding it to an image using convert
 
@@ -1440,6 +1440,7 @@ and this is the content of the file congrats
 
     
     
+
 
 
 
